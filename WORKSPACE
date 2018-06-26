@@ -2,11 +2,17 @@ workspace(name = "com_lyft_protoc_gen_validate")
 
 load('@bazel_tools//tools/build_defs/repo:git.bzl', 'git_repository')
 
+#git_repository(
+#    name = "io_bazel_rules_go",
+#    remote = "https://github.com/bazelbuild/rules_go.git",
+#    commit = "cdaa8e35cf53ba539ebe5bf6a4a407f91a284594",
+#)
 git_repository(
     name = "io_bazel_rules_go",
-    remote = "https://github.com/bazelbuild/rules_go.git",
-    commit = "cdaa8e35cf53ba539ebe5bf6a4a407f91a284594",
+    remote = "https://github.com/lubinsz/bazel-test.git",
+    commit = "4366052cc9efa41861256ba9ba20ee3501b5b8aa",
 )
+
 load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains")
 load("//bazel:go_proto_library.bzl", "go_proto_repositories")
 
